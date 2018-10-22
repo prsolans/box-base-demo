@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.row.main
+    div.col-lg-6.col-sm-12
+      h1= title
+      p Intro Paragraph
+      p Secondary Paragraph
+      h2= 'Getting Started'
+      ul
+        li: a(href='/factsheets') PDF
+        li Policies and Procedures
+      h2= 'Video Training'
+      ul 
+        li: a(href='/videos') Video
+        li How to Position Different Plans
+        li The Affidavit Workcenter
+    div.col-lg-6.col-sm-12
+      p
+      iframe(width='100%', height='550', frameborder='0', src='https://prshome.app.box.com/embed/s/cjrnalszlmldviidlp5n8n3y7osx3w3l?sortColumn=name&view=list&showParentPath=false', allowfullscreen, webkitallowfullscreen, msallowfullscreen)
+
