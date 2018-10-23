@@ -9,19 +9,19 @@ body {
   // These fields control the dark background color, the text color and the font.
   // Change all you want. 
   */
-  color: #54698D;
-  background-color: #61b5e1;
+  background-color: #1483CB;
+  color: #333333;
   font: 16px "Lato", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 
 footer.footer {
+  height: 60px;
   /* EDIT ME: 
   // The background-color for the footer starts out matching the background-color of the body.
   // Change all you want. 
   */
-  height: 60px;
-  background-color: #61b5e1;
+  background-color: #1483CB;
 }
 
 
@@ -30,7 +30,7 @@ a {
   // The color of the links on the pages... not a big deal.
   // Change all you want. 
   */
-  color: #00B7FF;
+  color: #1483CB;
 }
 
 h1, h2, h3 {

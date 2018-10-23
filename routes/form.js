@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET fact sheet layout */
 router.get('/', function(req, res, next) {
-  res.render('factsheets', { title: 'Getting Started', subtitle: 'Project 101' });
+  res.render('form', { title: 'Upload Content', subtitle: '' });
 });
 
 module.exports = router;
