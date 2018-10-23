@@ -14,8 +14,7 @@
 To get this application fired up, you will need to use Terminal. 
 1. From Terminal, navigate to the folder where the application is located: Type `cd newboxdemo`
 2. Copy/paste the following: `DEBUG=myapp:* npm start`
-3. Navigate to [http://localhost:3000]: http://localhost:3000 
-| in your browser to see the application.
+3. Navigate to http://localhost:3000 in your browser to see the application.
 
 ### Step 3: Customize the application
 You'll want to refine some styles and some content.

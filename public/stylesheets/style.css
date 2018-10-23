@@ -4,24 +4,48 @@ html, body {
 
 body {
   padding: .5% 0px;
+  font-size: .875rem;
+  /* EDIT ME: 
+  // These fields control the dark background color, the text color and the font.
+  // Change all you want. 
+  */
   color: #54698D;
   background-color: #61b5e1;
-  font-size: .875rem;
   font: 16px "Lato", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.fill { 
-    height:94vh;
+
+footer.footer {
+  /* EDIT ME: 
+  // The background-color for the footer starts out matching the background-color of the body.
+  // Change all you want. 
+  */
+  height: 60px;
+  background-color: #61b5e1;
 }
 
+
 a {
+  /* EDIT ME: 
+  // The color of the links on the pages... not a big deal.
+  // Change all you want. 
+  */
   color: #00B7FF;
 }
 
 h1, h2, h3 {
+  /* EDIT ME: 
+  // The color of the headlines on the pages... not a big deal.
+  // Change all you want. 
+  */
   color: #154073;
 }
 
+
+/* LEAVE THE REST OF THIS ALONE
+// You should either leave this stuff alone,
+// or accept the consequences. 
+*/
 div.main {
   background-color: #F4F6F9;
   padding: 20px 15px;
@@ -39,12 +63,11 @@ div.header {
   padding: 15px 15px;
 }
 
-footer.footer {
-  height: 60px;
-  background-color: #61b5e1;
-}
-
 @media screen and (max-width: 600px){
   div.left, div.right { width: 100%; clear: both; }
   div.right { padding: 1% 0; }
+}
+
+.fill { 
+    height:94vh;
 }
