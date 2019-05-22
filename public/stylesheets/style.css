@@ -9,8 +9,8 @@ body {
   // These fields control the dark background color, the text color and the font.
   // Change all you want. 
   */
-  background-color: #1483CB;
-  color: #333333;
+  background-color: #002847;
+  color: #151f26;
   font: 16px "Lato", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -21,7 +21,7 @@ footer.footer {
   // The background-color for the footer starts out matching the background-color of the body.
   // Change all you want. 
   */
-  background-color: #1483CB;
+  background-color: #002847;
 }
 
 
@@ -30,7 +30,7 @@ a {
   // The color of the links on the pages... not a big deal.
   // Change all you want. 
   */
-  color: #1483CB;
+  color: #0D519E;
 }
 
 h1, h2, h3 {
@@ -38,7 +38,7 @@ h1, h2, h3 {
   // The color of the headlines on the pages... not a big deal.
   // Change all you want. 
   */
-  color: #154073;
+  color: #151f26;
 }
 
 
@@ -47,7 +47,7 @@ h1, h2, h3 {
 // or accept the consequences. 
 */
 div.main {
-  background-color: #F4F6F9;
+  background-color: white;
   padding: 20px 15px;
   border: 1px solid #cbcbcb;
   border-color: #cdd4de;
@@ -70,4 +70,18 @@ div.header {
 
 .fill { 
     height:94vh;
+}
+
+div.content-explorer, div.content-uploader {
+  height: 500px;
+}
+
+.bds-homepage-button-primary {
+  padding: 16px 40px;
+  border-radius: 2px;
+  background-color: #0061d5;
+  transition: all .2s ease;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
 }

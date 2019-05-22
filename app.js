@@ -8,8 +8,23 @@ var indexRouter = require('./routes/index');
 var factsheetsRouter = require('./routes/factsheets');
 var videosRouter = require('./routes/videos');
 var formRouter = require('./routes/form');
+var metadataRouter = require('./routes/metadata');
+
 
 var app = express();
+
+/////////////////////
+// UPDATE HERE
+// Get Developer Token from Dev Console->App->Configuration
+// Will expire after 30 minutes
+app.locals.devToken = 'oQSFNsGDlvBJGNBYj3Zz0za4nqk1CekX';
+
+// Set to root Id of the main folder you want to see on the homepage
+app.locals.rootFolder = '77254170534';
+// Set to folder you want new content uploaded directly into
+app.locals.uploadFolder = '77253195217';
+/////////////////////
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,22 +40,23 @@ app.use('/', indexRouter);
 app.use('/factsheets', factsheetsRouter);
 app.use('/videos', videosRouter);
 app.use('/form', formRouter);
+app.use('/metadata', metadataRouter);
 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;

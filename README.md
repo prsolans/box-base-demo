@@ -27,9 +27,10 @@ Updating the colors: Open the stylesheet found at *public/stylesheets/style.css*
 #### Content
 By default you have three pages built out. 
 
-1. /views/index.pug - This is the homepage layout. You can adjust the text here, and change the URL for the embedded Box content element. To get the URL for your content, select More Actions->Embed Widget from the chosen folder in Box, and copy the SRC attribute from the iframe tag. Replace SRC attribute on line 20 of index.pug.
+1. /views/index.pug - This is the homepage layout. You can adjust the text here.
 2. /views/videos.pug - You can refine the text for this page, and swap out the Embed Widget URL for the Box content element. 
 3. /views/factsheets.pug - You can refine the text for this page, and swap out the Embed Widget URL for the Box content element. 
+4. public/js/folder-explorer.js - Update folderId to set the root folder displayed. Update the accessToken as well.
 
 You can adjust the page titles displayed by adjusting the *title* and *subtitle* attributes found in the /routes/* files. 
 

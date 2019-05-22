@@ -2,18 +2,19 @@ extends layout
 
 block content
   div.row.main
-    div.col-lg-6.col-sm-12
+    div.col-lg-5.col-sm-12
       h1= title
-      p Intro Paragraph
-      p Secondary Paragraph
+      p Whether it's by email, fax or via a portal, 
+        b: all content is being routed into Box.
+      p By routing content into appropriate folders in Box, we can trigger actions that lead to efficient business process.
       h2= 'Getting Started'
-      ul
-        li: a(href='/factsheets') View a PDF
-        li: a(href='/form') Upload Content
-      h2= 'Video Training'
-      ul 
-        li: a(href='/videos') Watch a Video
-    div.col-lg-6.col-sm-12
-      p
-      iframe(width='100%', height='550', frameborder='0', src='https://prshome.app.box.com/embed/s/cjrnalszlmldviidlp5n8n3y7osx3w3l?sortColumn=name&view=list&showParentPath=false', allowfullscreen, webkitallowfullscreen, msallowfullscreen)
+      ul        
+        li: a(href='/form') License upload
+        li: a(href='/metadata') Intelligent capture in action        
+
+    div.col-lg-7.col-sm-12
+       
+      div.content-explorer
+      script(src='https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/explorer.js')
+      script(src='/js/content-explorer.js', client=secret, folder=root)
 
