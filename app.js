@@ -16,7 +16,7 @@ var app = express();
 // UPDATE HERE
 // Get Developer Token from Dev Console->App->Configuration
 // Will expire after 30 minutes
-app.locals.devToken = 'OTQt8MV7DCONTqwtfMKoKfr7P9pLgATH';
+app.locals.devToken = 'kaH2VZUB7TpKzIjoZlYDAOIQ7youXVpu';
 
 app.locals.version = '__Atlanta';
 // Set to root Id of the main folder you want to see on the homepage
