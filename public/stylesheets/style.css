@@ -17,13 +17,23 @@ body {
 
 footer.footer {
   height: 60px;
+  padding: 15px;
   /* EDIT ME: 
   // The background-color for the footer starts out matching the background-color of the body.
   // Change all you want. 
   */
-  background-color: #002847;
+  background-color: #312281;
+  color: white;
+  font-size: 1.3em;
 }
 
+footer.footer h5 {
+  float:right;
+}
+
+div.left-column {
+  /*border-right: 1px solid #333;*/
+}
 
 a {
   /* EDIT ME: 
@@ -41,6 +51,15 @@ h1, h2, h3 {
   color: #151f26;
 }
 
+h2.light {
+  color: #999;
+}
+
+img.center {
+  display: block;
+  margin: auto;
+}
+
 
 /* LEAVE THE REST OF THIS ALONE
 // You should either leave this stuff alone,
@@ -56,11 +75,21 @@ div.main {
   height: 99%;
 }
 
+div.main p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+div.main p.margin-top {
+  margin-top: 20px;
+}
+
 div.header {
   color: white;
   background-color: white;
   min-height: 60px;
   padding: 15px 15px;
+  vertical-align: bottom;
 }
 
 @media screen and (max-width: 600px){
@@ -72,16 +101,124 @@ div.header {
     height:94vh;
 }
 
-div.content-explorer, div.content-uploader {
+div.content-explorer, div.content-uploader, div.preview-container {
   height: 500px;
+  clear: both;
 }
 
-.bds-homepage-button-primary {
+.bds-homepage-button-primary, .bds-homepage-button-primary:hover {
   padding: 16px 40px;
   border-radius: 2px;
-  background-color: #0061d5;
+  background-color: #EA6115;
   transition: all .2s ease;
   color: #fff;
   font-size: 16px;
   line-height: 16px;
+  margin: 10px auto;
+  float: right;
+}
+
+div.profile {
+  float: right;
+
+}
+
+div.actions {
+  margin: 80px auto;
+}
+
+.preview-container {
+  border: 1px solid #eee;
+  height: 490px;
+  width: 100%;
+}
+
+div.row.blue {
+  background-color: #0071F7;
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+div.row.blue h2 {
+  color: white;
+} 
+
+
+div.left-align {
+  padding-left: 0;
+}
+
+.bs-callout {
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.bs-callout.bs-callout-info {
+    border-left: 10px solid #312281;
+    padding-right: 15px;
+}
+
+.bs-callout h4 {
+    color: #0071F7;
+    margin: 26px 0 2px 0;
+}
+
+
+
+.bs-callout.bs-callout-light {
+    border-left: 5px solid #292b2c;
+    padding-right: 0;
+    height: auto;
+    clear: both;
+}
+
+.bs-callout.bs-callout-light h4 {
+    color: #292b2c;
+}
+
+button.btn-primary {
+  background-color: #EA6115;
+}
+
+button.btn-lg.btn-primary {
+  float: right;
+  border-radius: 0px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button.btn-lg.btn-login {
+  cursor: pointer;
+}
+
+div.group-buttons button.btn-lg.btn-primary{
+  float: right;
+  font-size: 1em;
+}
+
+div.chevrons {
+  text-align: center;
+  font-size: 2em;
+}
+
+img.userPic {
+  float: left;
+  height: 100px;
+  border-radius: 50%;
+  margin: 7px 21px 7px 7px;
+}
+
+img.center.logos{
+  padding-top: 55px;
+}
+
+img.logo {
+  padding: 0 55px;
+}
+
+img.right {
+  float: right;
 }

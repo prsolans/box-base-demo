@@ -9,5 +9,23 @@ var accessToken = document.currentScript.getAttribute('client');
 var contentExplorer = new Box.ContentExplorer();
 contentExplorer.show(folderId, accessToken, {
     container: '.content-explorer',
+    contentPreviewProps: {
+        contentSidebarProps: {
+            detailsSidebarProps: {
+                hasNotices: true,
+                hasProperties: true,
+                hasAccessStats: true,
+                hasVersions: true
+            },
+            hasActivityFeed: true,
+            hasSkills: true,
+            hasMetadata: true
+        }
+    },
     logoUrl: 'http://prsboxapi.com:3000/images/logo.png',
+    canPreview: true,
+    canDownload: false,
+    canDelete: true,
+    canShare: true,
+    canSetShareAccess: true
 });

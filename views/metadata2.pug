@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  div.row.main
+
+    div.col-lg-12.bs-callout.bs-callout-info 
+        img.userPic(src='/images/lee.jpg', height='50px')
+        h4 Lee's Story
+        p 
+        | Lee is a reviewer,
+        br
+        | And he wants access to relevant and timely information
+        br
+        | So that he can focus on creating value not gathering data
+
+    div.col-lg-4.col-sm-12
+      h2.light With data to guide your process
+      h2 You can focus on vital business tasks
+      p Once we have the content, we can learn what it is and make smart choices about what to do next.
+      p Identifying content types and routing to the right resource gets applications completed faster and with less errors.
+
+      div.row
+        div.col-lg-4.group-buttons
+          a(href=filePath, target='_blank'): button.btn-lg.btn-primary(type='button', data-toggle='modal', data-target='.bs-example-modal-lg') About that data
+        div.col-lg-4.group-buttons
+          a(href='https://prshome.app.box.com/boxrelay/edit/966448', target='_blank'): button.btn-lg.btn-primary(type='button', data-toggle='modal', data-target='.bs-example-modal-lg') Building a process
+        div.col-lg-4.group-buttons
+          a(href='https://prs-box-demo-dev-ed.lightning.force.com/lightning/r/Case/500f400000I902AAAR/view', target='_blank'): button.btn-lg.btn-primary(type='button', data-toggle='modal', data-target='.bs-example-modal-lg') Content in context
+        
+    div.col-lg-8.col-sm-12            
+      div.preview-container
+      script(src='https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/preview.js')
+      script(src='/js/content-preview.js', fileId=fileId, client=secret)
+     
+      
+    div.col-lg-4.chevrons
+      img.chevron(src='/images/right-chevron.png') 
+      | Getting content
+    div.col-lg-4.chevrons
+      img.chevron(src='/images/right-chevron.png') 
+      | Extracting information
+    div.col-lg-4.chevrons
+      img.chevron.blue(src='/images/right-chevron.png') 
+      | Making decisions

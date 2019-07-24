@@ -2,19 +2,32 @@ extends layout
 
 block content
   div.row.main
-    div.col-lg-5.col-sm-12
-      h1= title
-      p Whether it's by email, fax or via a portal, 
-        b: all content is being routed into Box.
-      p By routing content into appropriate folders in Box, we can trigger actions that lead to efficient business process.
-      h2= 'Getting Started'
-      ul        
-        li: a(href='/form') License upload
-        li: a(href='/metadata') Intelligent capture in action        
-
-    div.col-lg-7.col-sm-12
-       
-      div.content-explorer
-      script(src='https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/explorer.js')
-      script(src='/js/content-explorer.js', client=secret, folder=root)
-
+    div.col-lg-3.col-sm-12
+      h2.light Applicant Portal
+      h2 A central hub for interacting with the application process
+      //- p.margin-top Imagine having all your content funneled to the same place. You can extract meaningful information from your content and use it to keep people working on the right things. 
+      //- p Let's remove barriers from getting the job done, all the while protecting the content and the company with security and compliance. 
+      
+    div.col-lg-6.col-sm-12       
+      div.bs-callout.bs-callout-info 
+        form#loginForm(action='')
+        h2 #[i.fa.fa-lock] Login 
+        .form-group.input-group
+          span.input-group-addon
+            i.glyphicon.glyphicon-user
+          input.form-control(type='text', name='username', placeholder='Username', default='prsolans')
+        .form-group.input-group
+          span.input-group-addon
+            i.glyphicon.glyphicon-lock
+          input.form-control(type='password', name='password', placeholder='Password', default='demo12345')
+        .checkbox
+          label
+            input(type='checkbox')
+            |  I agree to the 
+            a(href='#') Terms and Conditions
+        .form-group
+          a(href='/home'): button.btn-lg.btn-login(type='button', data-toggle='modal', data-target='.bs-example-modal-lg') Get to work
+        .form-group
+          a(href='#') Forgot Password 
+          | | 
+          a(href='#') Support    

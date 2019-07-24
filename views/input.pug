@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.row.main
+    div.col-lg-3.col-sm-12
+      div.bs-callout
+        img.userPic(src='/images/janice.jpg', height='50px')
+        h4 Janice Sample
+        p Applicant #10046
+          br
+          | Member since 2019
+    
+      //- h2 Let your content flow across them
+      //- p When you have a true platform for your content, you gain real advantage from your information.
+      //- p From accountability to security, capture data from unstructured content to drive your business.
+
+      //- img.center.logos(src='/images/integrations.png', width='480px')
+
+    div.col-lg-6.col-sm-12
+      div.bs-callout.bs-callout-info    
+        h2.light Upload documentation
+        div.content-uploader
+        script(src='https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.js')
+        script(src='/js/content-uploader.js', client=secret, folder=upload)
+        a(href='/metadata'): button.btn-lg.btn-primary(type='button', data-toggle='modal', data-target='.bs-example-modal-lg') Put the content to work #[i(class='fas fa-chevron-right')]
+
+    //- div.col-lg-3.col-sm-12
+    //-   div.bs-callout
+    //-     h4 Your tasks

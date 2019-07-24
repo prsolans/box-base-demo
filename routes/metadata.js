@@ -14,16 +14,14 @@ router.get('/', function(req, res, next) {
 
     // Create new basic client with developer token
     const client = sdk.getBasicClient(req.app.locals.devToken);
-
-
-
-    // https://prshome.app.box.com/folder/77253195217 (BCD/__Atlanta/License Uploads)
-    var folderId = '77253195217';
+    var version = req.app.locals.version;
+    var uploadFolder = req.app.locals.uploadFolder;
+    var userType = 'Reviewer';
 
     // Get the fileId for the most recent upload=
     var fileId = '';
 
-    client.folders.getItems(folderId, limit = 1)
+    client.folders.getItems(uploadFolder, limit = 1)
         .then(items => {
             lastLicenseRecieved = items.entries[0];
             fileId = lastLicenseRecieved.id;
@@ -33,6 +31,8 @@ router.get('/', function(req, res, next) {
                 .then(metadata => {
 
                     var card0 = metadata.entries[0].cards[0];
+                    console.log("!!!!")
+                    console.log(metadata.entries[0]);
                     var card0title = card0.skill_card_title['message'];
 
                     var issuerData = card0.entries;
@@ -59,18 +59,20 @@ router.get('/', function(req, res, next) {
                             var thisKey = camelize(str.substr(0, split).toLowerCase());
                             var thisValue = str.substr(split + 2, length);
 
-                            console.log('K: ' + thisKey);
-                            console.log('V: ' + thisValue);
+                            // console.log('K: ' + thisKey);
+                            // console.log('V: ' + thisValue);
+
+
 
                             metadataValues[thisKey] = thisValue;
-
                         }
 
                         return metadataValues;
                     }
 
+                    // Begin collection data from each Skills card and passing into metadata
                     var card0MetadataValues = createMetadataObject(issuerData);
-                    console.log(card0MetadataValues);
+                    // console.log(card0MetadataValues);
 
                     client.files.addMetadata(fileId, 'enterprise', 'idIssuerMetadata', card0MetadataValues)
                         .then(metadata => { console.log('whoa'); });
@@ -79,9 +81,9 @@ router.get('/', function(req, res, next) {
                     var card1title = card1.skill_card_title['message'];
 
                     var idData = card1.entries;
-                    console.log(idData);
+                    // console.log(idData);
                     var card1MetadataValues = createMetadataObject(idData);
-                    console.log(card1MetadataValues);
+                    // console.log(card1MetadataValues);
 
                     client.files.addMetadata(fileId, 'enterprise', 'idMetadata', card1MetadataValues)
                         .then(metadata => { console.log('there'); });
@@ -96,19 +98,15 @@ router.get('/', function(req, res, next) {
                     client.files.addMetadata(fileId, 'enterprise', 'idHolderMetadata', card2MetadataValues)
                         .then(metadata => { console.log('buddy'); });
 
-                    res.render('metadata', { title: "Get info from Skill card", card0: JSON.stringify(card0), card0title: card0title, card1: JSON.stringify(card1), card1title: card1title, card2: JSON.stringify(card2), card2title: card2title });
+                    // End collecting
 
+
+                    var filePath = 'https://prshome.app.box.com/file/' + fileId;
+                    res.render('metadata', { fileId: fileId, filePath: filePath, userType: userType, secret: req.app.locals.devToken, lastName: card2MetadataValues['lastName'], firstName: card2MetadataValues['firstName'], issuerName: card0MetadataValues['issuerName'] });
 
                 });
+
         });
-
-
-
-
-    // Get all the License Metadata from the Skills Cards and apply as metadataValues
-
-
-
 
 });
 

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/* GET fact sheet layout */
 router.get('/', function(req, res, next) {
 
     const BoxSDK = require('box-node-sdk');
@@ -14,15 +14,14 @@ router.get('/', function(req, res, next) {
 
     // Create new basic client with developer token
     const client = sdk.getBasicClient(req.app.locals.devToken);
-    var rootFolder = req.app.locals.rootFolder; 
+    var uploadFolder = req.app.locals.uploadFolder; 
     var version = req.app.locals.version;
-    var userType = 'Administrator';
+    var userType = 'Applicant';
 
     // Get the BCD Folder from the Box API
-    // Will start with getting this folder to show
-    // Will be able to adjust the get to grab whatever folder you want
-    client.folders.get(rootFolder)
-        .then(folder => res.render('index', { title: folder.name, userType: userType, secret: req.app.locals.devToken, root: rootFolder, version: version }));
+    // https://prshome.app.box.com/folder/77253195217 (BCD/__Atlanta/License Uploads)
+    client.folders.get(uploadFolder)
+        .then(folder => res.render('input', { userType: userType, secret: req.app.locals.devToken, upload: uploadFolder }));
 
 });
 

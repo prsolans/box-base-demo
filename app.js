@@ -5,11 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var factsheetsRouter = require('./routes/factsheets');
-var videosRouter = require('./routes/videos');
-var formRouter = require('./routes/form');
+var homeRouter = require('./routes/home');
+var inputRouter = require('./routes/input');
 var metadataRouter = require('./routes/metadata');
-
+// var videosRouter = require('./routes/videos');
 
 var app = express();
 
@@ -17,8 +16,9 @@ var app = express();
 // UPDATE HERE
 // Get Developer Token from Dev Console->App->Configuration
 // Will expire after 30 minutes
-app.locals.devToken = 'oQSFNsGDlvBJGNBYj3Zz0za4nqk1CekX';
+app.locals.devToken = 'OTQt8MV7DCONTqwtfMKoKfr7P9pLgATH';
 
+app.locals.version = '__Atlanta';
 // Set to root Id of the main folder you want to see on the homepage
 app.locals.rootFolder = '77254170534';
 // Set to folder you want new content uploaded directly into
@@ -37,11 +37,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/factsheets', factsheetsRouter);
-app.use('/videos', videosRouter);
-app.use('/form', formRouter);
+app.use('/home', homeRouter);
+app.use('/input', inputRouter);
 app.use('/metadata', metadataRouter);
+// app.use('/videos', videosRouter);
 
+app.use(function fileLog(req, res, next) {
+    console.log('fileLog');
+    next();
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
