@@ -18,14 +18,20 @@ You need some stuff to make this run. Here's how to do it.
 2. Install the dependencies
     Copy/paste:`npm install && npm update`
 
-### Step 2: Run the application
+### Step 3: Run the application
 To get this application fired up, you will need to use Terminal.
 1. From Terminal, navigate to the folder where the application is located
 2. Run the app
       Copy/paste: `DEBUG=myapp:* npm start`
 3. Navigate to http://127.0.0.1:3000 in your browser to see the application.
+* this will work.... sort of*
 
-### Step 3: Customize the application
+### Step 4: Amend your hosts file
+To make Box UI Elements work in your app, you will need to add a line to your hosts file
+1. Open your hosts file (assumes Mac) from terminal `open /etc/hosts`
+2. Add a line like this `prswebapi.com 127.0.0.1`
+
+### Step 5: Customize the application
 First, you will connect this app to your demo environment.
 1. Get Developer Token
 2. Update Folders
