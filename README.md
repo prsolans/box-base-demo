@@ -2,7 +2,7 @@
 ## Set up and installation for local web application with some integrated Box parts.
 
 *Prequisites*
-* A text editor - I'd recommend VSCode or Sublime Text
+* A text editor - I'd recommend VSCode[https://code.visualstudio.com/] or Sublime Text[https://www.sublimetext.com/3]
 * Some familiarity with (or willingness to learn about) Terminal
 * The ability to copy/paste
 
@@ -13,9 +13,9 @@
 * Git
 
 *You'll have no issues if you are familiar with*
-* Node
-* Express
-* Pug
+* Node [https://nodejs.org/en/download/]
+* Express [https://expressjs.com/]
+* Pug [https://pugjs.org/api/getting-started.html]
 
 ### Step 1: Get the application
 
