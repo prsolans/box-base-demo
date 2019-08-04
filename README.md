@@ -2,7 +2,7 @@
 ## Set up and installation for local web application with some integrated Box parts.
 
 *Prequisites*
-* A text editor - I'd recommend VSCode[https://code.visualstudio.com/] or Sublime Text[https://www.sublimetext.com/3]
+* A text editor - I'd recommend VSCode [https://code.visualstudio.com/] or Sublime Text [https://www.sublimetext.com/3]
 * Some familiarity with (or willingness to learn about) Terminal
 * The ability to copy/paste
 
@@ -22,15 +22,12 @@
 #### Using Git From Terminal ####
 1. Go to Terminal
 2. Go to a parent folder of your choice
-3. Clone from Git -
-      Copy/paste: `git clone https://github.com/prsolans/box-base-demo.git localboxdemo`
+3. Clone from Git: `git clone https://github.com/prsolans/box-base-demo.git localboxdemo`
 
 ### Step 2: Build your environment
 You need some stuff to make this run. Here's how to do it.
-1. Change to the proper folder
-    Copy/paste: `cd localboxdemo`
-2. Install the dependencies
-    Copy/paste:`npm install && npm update`
+1. Change to the proper folder: `cd localboxdemo`
+2. Install the dependencies: `npm install && npm update`
 
 ### Step 3: Create your Box application
 You need to connect to a Box app that you create in the Dev Console.
@@ -81,4 +78,4 @@ For complete instructions, go here: https://cloud.app.box.com/notes/449593329660
 You can also trigger a Relay to kick off when the file is uploaded to your *uploadFolder*. This is a good way to demonstrate the value of Box in providing visibility into common and repeatable tasks.
 
 #### MORE ADVANCED STUFF
-If you create the proper metadata templates, and review the code on /localboxdemo/routes/metadata.js, you can parse the Skills card data and get it applied as structured Box metadata. In addition to being cooler, this also let's you kick off a Relay automatically based on metadata. If you get this far and need help, please reach out to me (Paul R Solans - prs@box.com).
+If you create the proper metadata templates, and review the code on /localboxdemo/routes/metadata.js, you can parse the Skills card data and get it applied as structured Box metadata. In addition to being cooler, this also let's you kick off a Relay automatically based on metadata. If you get this far and need help, please reach out to me (Paul R. Solans - prs@box.com).
