@@ -72,36 +72,13 @@ You should now have a working and branded app.
 2. The *rootFolder* you set in Step 4 will appear at http://localboxdemo.com:3000/home, and can be edited on the /localboxdemo/views/home.pug file
 3. The *uploadFolder* you set in Step 4 will appear at http://localboxdemo.com:3000/input, and can be edited on the /localboxdemo/views/input.pug file
 
-*Using the MEGA Endpoint*
+#### Using the MEGA Endpoint
 To make my demo shine, I am leveraging the DemoEng MEGA Endpoint (shout-outs to Elliot Glasenk, Wes Byers and the incomparable Demo Engineering team). When configured for the *uploadFolder*, files _containing the word license in the title_ and uploaded via localboxdemo will automatically have relevant details extracted and turned into Box Skills Cards.
 
 For complete instructions, go here: https://cloud.app.box.com/notes/449593329660?s=mgfuea9ard5xxkvlyijnthv9svhtztl1
 
-*Adding in some process*
+#### Adding in some process
 You can also trigger a Relay to kick off when the file is uploaded to your *uploadFolder*. This is a good way to demonstrate the value of Box in providing visibility into common and repeatable tasks.
 
-*MORE ADVANCED STUFF*
+#### MORE ADVANCED STUFF
 If you create the proper metadata templates, and review the code on /localboxdemo/routes/metadata.js, you can parse the Skills card data and get it applied as structured Box metadata. In addition to being cooler, this also let's you kick off a Relay automatically based on metadata. If you get this far and need help, please reach out to me (Paul R Solans - prs@box.com).
-
-
-
-
-
-
-
-
-#### Style
-Adding a new logo: Save your new logo file as a PNG image in the folder *public/images/*
-
-Updating the colors: Open the stylesheet found at *public/stylesheets/style.css*. Search for the words 'EDIT ME' to find where to update colors.
-
-#### Content
-By default you have three pages built out.
-
-1. /views/index.pug - This is the homepage layout. You can adjust the text here.
-2. /views/videos.pug - You can refine the text for this page, and swap out the Embed Widget URL for the Box content element.
-3. /views/factsheets.pug - You can refine the text for this page, and swap out the Embed Widget URL for the Box content element.
-4. public/js/folder-explorer.js - Update folderId to set the root folder displayed. Update the accessToken as well.
-
-You can adjust the page titles displayed by adjusting the *title* and *subtitle* attributes found in the /routes/* files.
-
