@@ -15,14 +15,14 @@ var app = express();
 /////////////////////
 // UPDATE HERE
 // Get Developer Token from Dev Console->App->Configuration
-// Will expire after 30 minutes
+// Will expire after 60 minutes
 app.locals.devToken = 'kaH2VZUB7TpKzIjoZlYDAOIQ7youXVpu';
-
-app.locals.version = '__Atlanta';
 // Set to root Id of the main folder you want to see on the homepage
 app.locals.rootFolder = '77254170534';
 // Set to folder you want new content uploaded directly into
 app.locals.uploadFolder = '77253195217';
+// Set to the name you choose for your app
+app.locals.version = 'Local Box Demo';
 /////////////////////
 
 
