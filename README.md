@@ -42,8 +42,11 @@ We are going to use the Developer Token to authenticate this app into your demo 
 5. Open the file at /localboxdemo/app.js in your text editor
 6. Starting at Line 15, you will see a section with values you should update:
 * devToken - Paste the Developer Token from step 4 here
+* demoDomain - The domain of your demo environment
 * rootFolder - This is the ID of the folder you want to display as a Content Explorer in the app
 * uploadFolder - This is the ID of the folder in your app that will set to kick off the license ML endpoint
+* boxRelayLink - (Optional) A link to a Box Relay configuration page. A quick link is included on the metadata layout
+* salesforceLink - (Optional) A link to a record in your Salesforce demo org. A quick link is included on the metadata layout.
 * version - This is for display purposes only. It will appear in the footer of the app
 
 ### Step 5: Amend your hosts file
