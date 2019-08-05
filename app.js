@@ -16,11 +16,17 @@ var app = express();
 // UPDATE HERE
 // Get Developer Token from Dev Console->App->Configuration
 // Will expire after 60 minutes
-app.locals.devToken = 'kaH2VZUB7TpKzIjoZlYDAOIQ7youXVpu';
+app.locals.devToken = '0biP82c3if9pEkA50NvM9fEjUGjR74mJ';
+// Set to custom domain of your Box demo environment
+app.locals.demoDomain = 'https://prshome.app.box.com'
 // Set to root Id of the main folder you want to see on the homepage
 app.locals.rootFolder = '77254170534';
 // Set to folder you want new content uploaded directly into
 app.locals.uploadFolder = '77253195217';
+// Set to custom link of a Box Relay (for show and tell purposes)
+app.locals.boxRelayLink = 'https://prshome.app.box.com/boxrelay/edit/966448'
+// Set to custom link in your demo Salesforce environment
+app.locals.salesforceLink = 'https://prs-box-demo-dev-ed.lightning.force.com/lightning/r/Case/500f400000I902AAAR/view'
 // Set to the name you choose for your app
 app.locals.version = 'Local Box Demo';
 /////////////////////

@@ -16,6 +16,9 @@ router.get('/', function(req, res, next) {
     const client = sdk.getBasicClient(req.app.locals.devToken);
     var version = req.app.locals.version;
     var uploadFolder = req.app.locals.uploadFolder;
+    var boxRelayLink = req.app.locals.boxRelayLink;
+    var salesforceCaseLink = req.app.locals.salesforceLink;
+    var boxDomain = req.app.locals.demoDomain;
     var userType = 'Reviewer';
 
     // Get the fileId for the most recent upload=
@@ -101,8 +104,8 @@ router.get('/', function(req, res, next) {
                     // End collecting
 
 
-                    var filePath = 'https://prshome.app.box.com/file/' + fileId;
-                    res.render('metadata', { fileId: fileId, filePath: filePath, userType: userType, secret: req.app.locals.devToken, lastName: card2MetadataValues['lastName'], firstName: card2MetadataValues['firstName'], issuerName: card0MetadataValues['issuerName'] });
+                    var filePath = boxDomain + '/file/' + fileId;
+                    res.render('metadata', { fileId: fileId, filePath: filePath, userType: userType, secret: req.app.locals.devToken, lastName: card2MetadataValues['lastName'], firstName: card2MetadataValues['firstName'], issuerName: card0MetadataValues['issuerName'], salesforceCaseLink: salesforceCaseLink, boxRelayLink: boxRelayLink });
 
                 });
 
