@@ -77,6 +77,8 @@ To make my demo shine, I am leveraging the DemoEng MEGA Endpoint (shout-outs to 
 
 For complete instructions, go here: https://cloud.app.box.com/notes/449593329660?s=mgfuea9ard5xxkvlyijnthv9svhtztl1
 
+NOTE: I have a folder in my demo environment called BCD (Box Custom Demo) where I keep all the instances on this 'demo environment'. My Box Skill for the MEGA Endpoint is set to run on my BCD parent folder, so it don't need to set up for each demo. 
+
 #### Adding in some process
 You can also trigger a Relay to kick off when the file is uploaded to your *uploadFolder*. This is a good way to demonstrate the value of Box in providing visibility into common and repeatable tasks.
 
@@ -104,5 +106,8 @@ Here are the fields to create if you want to use the sample license provided (se
 * Issue Date (Text)
 * Expiration Date (Text)
 
+NOTE: The MEGA Endpoint does not extract the same information from each ID. This setup is tested for the sample license provided (Tennessee drivers license), but may not work for all US drivers licenses, and will not work for passports. 
+
+NOTE: The code to parse and apply the metadata is in routes/metadata.js. Lines 33-108 pulls the content from the Skills cards, parses the Skills card content into key/value pairs, and then pushes the key/value pairs back to structured metadata.
 
 If you get this far and need help, please reach out to me (Paul R. Solans - prs@box.com).
