@@ -80,5 +80,29 @@ For complete instructions, go here: https://cloud.app.box.com/notes/449593329660
 #### Adding in some process
 You can also trigger a Relay to kick off when the file is uploaded to your *uploadFolder*. This is a good way to demonstrate the value of Box in providing visibility into common and repeatable tasks.
 
-#### MORE ADVANCED STUFF
-If you create the proper metadata templates, and review the code on /localboxdemo/routes/metadata.js, you can parse the Skills card data and get it applied as structured Box metadata. In addition to being cooler, this also let's you kick off a Relay automatically based on metadata. If you get this far and need help, please reach out to me (Paul R. Solans - prs@box.com).
+### ADVANCED STUFF
+If you create the proper metadata templates, and review the code on /localboxdemo/routes/metadata.js, you can parse the Skills card data and get it applied as structured Box metadata. In addition to being cooler, this also let's you kick off a Relay automatically based on metadata. 
+
+Here are the fields to create if you want to use the sample license provided (see sample/license.jpg). 
+
+*ID Holder Metadata*
+* First Name (Text)
+* Last Name (Text)
+* Gender (Dropdown - Single Select) (Options: M/F)
+* Address (Text)
+* Birth Date (Text)
+
+*ID Issuer Metadata*
+* Issuer Code (Text)
+* Issuer Name (Text)
+* ID Name (Text)
+* ID Text (Text)
+* ID Class (Text)
+
+*ID Metadata*
+* Document Number (Text)
+* Issue Date (Text)
+* Expiration Date (Text)
+
+
+If you get this far and need help, please reach out to me (Paul R. Solans - prs@box.com).
