@@ -1,6 +1,8 @@
 # Box Base Demo
 ## Set up and installation for local web application with some integrated Box parts.
 
+IMPORTANT: This framework is intended solely for local testing and demonstration purposes. This is not intended for production work.
+
 *Prequisites*
 * A text editor - I'd recommend VSCode [https://code.visualstudio.com/] or Sublime Text [https://www.sublimetext.com/3]
 * Some familiarity with (or willingness to learn about) Terminal
