@@ -31,6 +31,8 @@ You need some stuff to make this run. Here's how to do it.
 1. Change to the proper folder: `cd localboxdemo`
 2. Install the dependencies: `npm install && npm update`
 
+NOTE: `npm` refers to Node Package Manager, and helps build our environment. If you have trouble with Step 2.2, you may need to install/update NodeJS and XCode. For more information... Google it. 
+
 ### Step 3: Create your Box application
 You need to connect to a Box app that you create in the Dev Console.
 1. Create a "Custom App"
