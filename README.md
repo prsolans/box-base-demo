@@ -52,8 +52,14 @@ We are going to use the Developer Token to authenticate this app into your demo 
 ### Step 5: Amend your hosts file
 To make Box UI Elements work in your app, you will need to add a line to your hosts file
 1. Open your hosts file (assumes Mac) from terminal `open /etc/hosts`
-2. Copy/paste: `127.0.0.1 localboxdemo.com`
 
+NOTE: If you have trouble with saving this file, try the command `sudo nano /etc/hosts` to open the file. You may need to enter your computer password along the way, as this is a system file on your computer. 
+
+2. Copy/paste: `127.0.0.1 localboxdemo.com`
+3. Back in the Box Developer Console, go to the Configuration page and copy the following into the box Allowed Origins box under CORS Domain: `http://localboxdemo.com:3000`
+
+NOTE: We are using 'localboxdemo.com' for this demo, but you can replace this with whatever domain you'd like. 
+ 
 ### Step 6: Run the application
 To get this application fired up, you will need to use Terminal.
 1. From Terminal, navigate to the folder where the application is located
